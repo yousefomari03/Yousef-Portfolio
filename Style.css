@@ -1,0 +1,223 @@
+/* ========================================= */
+/* 0. CSS Reset */
+/* ========================================= */
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    /* الخلفية الأساسية: لون داكن عميق جداً لثيم الـ Backend */
+    margin: 0;
+    padding: 0;
+    background-color: #121212; 
+    
+    font-family: 'Arial', sans-serif;
+    color: #f1f1f1; /* لون نص أساسي فاتح */
+    line-height: 1.6;
+}
+
+/* ========================================= */
+/* 1. تصميم الرأس (HEADER) وشريط التنقل */
+/* ========================================= */
+header {
+    background-color: #1a1a1a; 
+    padding: 15px 15px;
+    margin: 0; 
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* 2. منطقة الشعار */
+.logo-area h3 {
+    color: #ffffff; 
+    margin: 0;
+    font-size: 20px;
+}
+
+/* 3. تصميم قائمة الروابط الرئيسية */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    display: flex; 
+    gap: 30px; 
+}
+
+/* 4. الروابط وروابط السوشيال (لون موحد) */
+.main-nav a, .social-links a {
+    text-decoration: none;
+    color: #b0b0b0; 
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, .social-links a:hover {
+    color: #ffffff; 
+}
+
+.social-links {
+    display: flex;
+    gap: 15px; 
+}
+
+/* ========================================= */
+/* 5. تنسيقات عامة للأقسام (General Layout) */
+/* ========================================= */
+main section {
+    padding: 80px 0; 
+    text-align: center;
+}
+
+main p, main h3, main h1, main h2 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* ========================================= */
+/* 6. تصميم قسم HOME مع الخلفية */
+/* ========================================= */
+#home-section {
+    background-color: #121212; 
+    background-blend-mode: normal; 
+    
+    padding-top: 200px; 
+    padding-bottom: 200px;
+    
+    /* طبقة داكنة لتناغم الألوان */
+    background-color: #1e1e1e; 
+    background-blend-mode: overlay; 
+    
+    padding-top: 200px; 
+    padding-bottom: 200px;
+}
+
+#home-section h1 {
+    font-size: 56px;
+    color: #ffffff; 
+    margin-bottom: 10px;
+}
+
+#home-section h2 {
+    font-size: 24px;
+    color: #b0b0b0; 
+    margin-top: 0;
+    font-weight: 400; 
+}
+
+/* ========================================= */
+/* 7. تصميم قسم PROJECTS */
+/* ========================================= */
+#projects-section {
+    background-color: #1e1e1e; 
+}
+
+#projects-section h3 {
+    font-size: 32px;
+    color: #ffffff; 
+    margin-bottom: 40px;
+}
+
+/* ========================================= */
+/* 8. تصميم قسم ABOUT ME (محتوى النص) */
+/* ========================================= */
+#about-section {
+    background-color: #121212; 
+}
+
+#about-section h3 {
+    font-size: 32px;
+    color: #ffffff; /* لون مميز لعنوان القسم */
+    margin-bottom: 40px;
+}
+
+#about-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d0d0d0;
+    text-align: justify;
+}
+
+/* ========================================= */
+/* 9. تصميم حاوية المهارات (Skills Container) */
+/* ========================================= */
+.skills-container {
+    max-width: 900px;
+    margin: 60px auto 0 auto; 
+    padding: 0 20px;
+    
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+/* 10. تصميم مربع المهارة الواحدة (Skill Item) */
+.skill-item {
+    background-color: #252526; 
+    color: #abcdd1; 
+    font-size: 16px;
+    font-weight: 600;
+    
+    padding: 8px 15px;
+    border-radius: 4px;
+    margin: 7.5px; 
+    
+    border: 1px solid #333; 
+}
+footer {
+    background-color: #1a1a1a; 
+    color: #b0b0b0; 
+    padding: 30px 20px;
+    font-size: 14px;
+    text-align: center; /* سنقوم بالتوسيط داخل footer-content */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    /* ***** التوزيع المطلوب: حقوق النشر (يسار) | معلومات الاتصال (يمين) ***** */
+    display: flex; 
+    justify-content: space-between; /* هذا هو مفتاح التوزيع على الأطراف */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content p {
+    margin: 0; 
+}
+
+/* تباعد بين الإيميل والهاتف */
+.contact-info span {
+    /* زيادة المسافة بين الإيميل والهاتف */
+    margin-left: 25px; 
+}
+
+/* هذا الكود لضمان أن الروابط تظهر بشكل جيد وتتناسب مع الألوان الداكنة */
+.footer-link {
+    text-decoration: none;
+    color: #b0b0b0; 
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+/* تصميم الشاشات الصغيرة: نجعل المحتوى عمودياً */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column; 
+    }
+    .footer-content p {
+        margin-bottom: 10px;
+    }
+    .contact-info span {
+        display: block; /* جعل الإيميل والهاتف يظهران على سطرين منفصلين */
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
