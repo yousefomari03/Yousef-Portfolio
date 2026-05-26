@@ -1,30 +1,25 @@
-
 * {
     box-sizing: border-box; 
 }
 
 body {
-    
     margin: 0;
     padding: 0;
-    background-color: #121212; 
-    
+    /* التعديل 1: توحيد لون خلفية الجسم الأساسية */
+    background-color: #1e1e1e; 
     font-family: 'Arial', sans-serif;
     color: #f1f1f1; 
     line-height: 1.6;
 }
 
-
 header {
     background-color: #1a1a1a; 
     padding: 15px 15px;
     margin: 0; 
-    
     display: flex;
     justify-content: space-between; 
     align-items: center; 
 }
-
 
 .logo-area h3 {
     color: #ffffff; 
@@ -32,16 +27,13 @@ header {
     font-size: 20px;
 }
 
-
 .main-nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    
     display: flex; 
     gap: 30px; 
 }
-
 
 .main-nav a, .social-links a {
     text-decoration: none;
@@ -58,10 +50,11 @@ header {
     gap: 15px; 
 }
 
-
 main section {
     padding: 80px 0; 
     text-align: center;
+    /* التعديل 2: ضمان أن كل الأقسام تأخذ نفس لون الخلفية بدون تباين حاد */
+    background-color: #1e1e1e; 
 }
 
 main p, main h3, main h1, main h2 {
@@ -71,18 +64,9 @@ main p, main h3, main h1, main h2 {
     padding: 0 20px;
 }
 
-
 #home-section {
-    background-color: #121212; 
-    background-blend-mode: normal; 
-    
-    padding-top: 200px; 
-    padding-bottom: 200px;
-    
-    
     background-color: #1e1e1e; 
     background-blend-mode: overlay; 
-    
     padding-top: 200px; 
     padding-bottom: 200px;
 }
@@ -110,19 +94,36 @@ main p, main h3, main h1, main h2 {
     margin-bottom: 40px;
 }
 
+/* التعديل 3: إضافة تنسيق للبطاقات (Project Cards) لتظهر بشكل طافٍ وفخم فوق الخلفية الموحدة */
+.project-card {
+    background-color: #252526; /* لون أفتح بدرجة بسيطة من الخلفية */
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 860px;
+    text-align: left; /* جعل النصوص بداخل البطاقة تبدأ من اليسار بانتظام */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-link-title {
+    text-decoration: none;
+    color: #abcdd1; /* لون مميز للعناوين القابلة للضغط */
+    transition: color 0.3s;
+}
+
+.project-link-title:hover {
+    color: #ffffff;
+}
 
 #about-section h3 {
-  
     font-size: 40px; 
     font-weight: 700; 
     color: #ffffff; 
-    
-   
     position: relative; 
     padding-bottom: 10px;
     margin-bottom: 40px; 
 }
-
 
 #about-section h3::after {
     content: '';
@@ -133,30 +134,26 @@ main p, main h3, main h1, main h2 {
     margin: 10px auto 0 auto; 
 }
 
-
 .skills-container {
     max-width: 900px;
     margin: 60px auto 0 auto; 
     padding: 0 20px;
-    
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
 }
-
 
 .skill-item {
     background-color: #252526; 
     color: #abcdd1; 
     font-size: 16px;
     font-weight: 600;
-    
     padding: 8px 15px;
     border-radius: 4px;
     margin: 7.5px; 
-    
     border: 1px solid #333; 
 }
+
 footer {
     background-color: #1a1a1a; 
     color: #b0b0b0; 
@@ -168,8 +165,6 @@ footer {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    
-    
     display: flex; 
     justify-content: space-between; 
     align-items: center;
@@ -180,9 +175,7 @@ footer {
     margin: 0; 
 }
 
-
 .contact-info span {
-    
     margin-left: 25px; 
 }
 
@@ -208,4 +201,13 @@ footer {
         margin-left: 0;
         margin-top: 5px;
     }
+}
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* برفع البطاقة 5 بكسل لفوق */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* بزيد عمق الظل */
+    border-color: #abcdd1; /* بغير لون الحواف للون المميز تبعك */
 }
